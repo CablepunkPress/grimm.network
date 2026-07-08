@@ -58,7 +58,7 @@ body {
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 3px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 main {
@@ -74,7 +74,7 @@ main {
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 4px;
+    border-radius: 27px;
     padding: 16px 48px;
     font-family: inherit;
     font-size: 18px;
