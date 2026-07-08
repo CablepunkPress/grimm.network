@@ -14,7 +14,7 @@
     }
 
     function drawMirror() {
-        time += 0.01;
+        time += 0.009;
 
         ctx.fillStyle = '#0e0e1a';
         ctx.fillRect(0, 0, width, height);
