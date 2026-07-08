@@ -1,6 +1,10 @@
 (function() {
-    const canvas = document.getElementById('mirror-canvas');
-    const ctx = canvas.getContext('2d');
+    const canvas = /** @type {HTMLCanvasElement} */ (
+        document.getElementById('mirror-canvas')
+    );
+    const ctx = /** @type {CanvasRenderingContext2D} */ (
+        canvas.getContext('2d')
+    );
 
     let width = 0;
     let height = 0;
@@ -19,7 +23,6 @@
         ctx.fillStyle = '#0e0e1a';
         ctx.fillRect(0, 0, width, height);
 
-        // Deep color layer — the purple-pink base
         const depths = [
             { hue: 310, x: 0.3, y: 0.4, drift: 1.4, phase: 0 },
             { hue: 280, x: 0.6, y: 0.6, drift: 1.1, phase: 1.8 },
@@ -43,7 +46,6 @@
             ctx.fillRect(0, 0, width, height);
         });
 
-        // Pearl layer — white-silver blobs that drift through the color
         const pearls = [
             { x: 0.25, y: 0.35, drift: 1.9, phase: 0.5, size: 0.35 },
             { x: 0.7,  y: 0.55, drift: 1.5, phase: 2.8, size: 0.3 },
@@ -70,7 +72,6 @@
 
         ctx.globalCompositeOperation = 'source-over';
 
-        // Shimmer bands — faster, more visible
         for (let i = 0; i < 4; i++) {
             const y = height * (0.2 + i * 0.2 + Math.sin(time * 0.8 + i * 1.7) * 0.18);
             const bandGradient = ctx.createLinearGradient(0, y - 50, 0, y + 50);
